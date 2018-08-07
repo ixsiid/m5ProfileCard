@@ -1,6 +1,4 @@
 {
 	"files.associations": {
-		"*.mop": "modelica",
-		"system_error": "cpp"
 	}
 }
