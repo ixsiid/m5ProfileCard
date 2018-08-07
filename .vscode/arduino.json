@@ -1,0 +1,6 @@
+{
+    "board": "espressif:esp32:m5stack-fire",
+    "configuration": "PSRAM=enabled,UploadSpeed=921600,DebugLevel=error",
+    "port": "COM39",
+    "sketch": "sketch_aug06a.ino"
+}
