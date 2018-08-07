@@ -22,4 +22,5 @@ typedef struct Profile
 	char *title;
 } Profile;
 
-char *createProfileText(Profile *profile);
+void createProfile(Profile * profile);
+void drawProfile();

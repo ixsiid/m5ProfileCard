@@ -1,4 +1,4 @@
-#include "qrdraw.hpp"
+#include "std_arduino.hpp"
 #include "profile.hpp"
 
 void setup()
@@ -14,25 +14,19 @@ void setup()
 	M5.setWakeupButton(BUTTON_B_PIN);
 	M5.setWakeupButton(BUTTON_C_PIN);
 
-/*
+	char name[10] = "ixsiid";
+	char mail[32] = "ixsiid@halzion.net";
+	char title[32] = "HALZION.NET";
+	char phone[1] = "";
+	char web[1] = "";
 	Profile p;
-	p.name = (char *)malloc(7);
-	memcpy(p.name, "ixsiid", 7);
-	p.mail = (char *)malloc(19);
-	memcpy(p.mail, "ixsiid@halzion.net", 19);
-	SNS sns[2];
-	sns[0].name = (char *)malloc(8);
-	memcpy(sns[0].name, "TWITTER", 8);
-	sns[0].id = (char *)malloc(8);
-	memcpy(sns[0].id, "@ixsiid", 8);
-	p.sns = sns;
-	p.sns_count = 1;
-
-	char *text = createProfileText(&p);
-	drawTextQRcode(text, 75, 3);
-	*/
-
-	drawTextQRcode("MECARD:N:IXSIID;;", 75, 3);
+	p.name = name;
+	p.mail = mail;
+	p.phone = phone;
+	p.web = web;
+	p.title = title;
+	createProfile(&p);
+	drawProfile();
 }
 
 bool turn = true;
