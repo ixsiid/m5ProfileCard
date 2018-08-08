@@ -17,12 +17,13 @@ class Profile {
 		static void setQR(const char * mail, const char * url, const char * phone);
 		static void draw();
 
+	protected:
+		static char Name[PROFILE_BUFFER_SIZE_NAME];
+		static char Title[PROFILE_BUFFER_SIZE_TITLE];
+		static bool Created;
+		static uint8_t QRBytes[PROFILE_QR_STREAM_SIZE];
+		static void drawQR(uint16_t x, uint16_t y, uint16_t color);
+
 	private:
 		Profile();
-
-		static char name[PROFILE_BUFFER_SIZE_NAME];
-		static char title[PROFILE_BUFFER_SIZE_TITLE];
-		static bool created;
-		static uint8_t profileQRStream[PROFILE_QR_STREAM_SIZE];
-		static void Profile::drawQR(uint16_t x, uint16_t y);
 };

@@ -14,9 +14,9 @@ void setup()
 	M5.setWakeupButton(BUTTON_B_PIN);
 	M5.setWakeupButton(BUTTON_C_PIN);
 
-	Profile.create("ixsiid", "HALZION.NET");
-	Profile.setQR("ixsiid@halzion.net", "", "");
-	Profile.draw();
+	Profile::create("ixsiid", "HALZION.NET");
+	Profile::setQR("ixsiid@halzion.net", "", "");
+	Profile::draw();
 }
 
 bool turn = true;
