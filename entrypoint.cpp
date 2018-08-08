@@ -14,19 +14,9 @@ void setup()
 	M5.setWakeupButton(BUTTON_B_PIN);
 	M5.setWakeupButton(BUTTON_C_PIN);
 
-	char name[10] = "ixsiid";
-	char mail[32] = "ixsiid@halzion.net";
-	char title[32] = "HALZION.NET";
-	char phone[1] = "";
-	char web[1] = "";
-	Profile p;
-	p.name = name;
-	p.mail = mail;
-	p.phone = phone;
-	p.web = web;
-	p.title = title;
-	createProfile(&p);
-	drawProfile();
+	Profile.create("ixsiid", "HALZION.NET");
+	Profile.setQR("ixsiid@halzion.net", "", "");
+	Profile.draw();
 }
 
 bool turn = true;
