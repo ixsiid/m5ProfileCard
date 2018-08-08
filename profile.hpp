@@ -3,6 +3,9 @@
 #include <M5Stack.h>
 #endif
 
+#ifndef PROFILE_H
+#define PROFILE_H
+
 #define PROFILE_QR_VERSION 8
 #define PROFILE_QR_SIZE (4 * PROFILE_QR_VERSION + 17)
 #define PROFILE_QR_PIXEL_NUM (PROFILE_QR_SIZE * PROFILE_QR_SIZE)
@@ -27,3 +30,5 @@ class Profile {
 	private:
 		Profile();
 };
+
+#endif
